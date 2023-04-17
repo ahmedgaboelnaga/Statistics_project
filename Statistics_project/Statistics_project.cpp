@@ -19,7 +19,7 @@ int main()
 	int largest = 0, smallest = 0;
 	double sum = 0;
 
-	int values[size]; // wrong because we must put a constant like values[5] or make a dynamic memory allocation
+	int* values = new int[size]; // dynamically allocate an array of integers of size 'size'
 	for (int i = 0; i < size; i++)
 	{
 		do
@@ -81,6 +81,8 @@ int main()
 
 	cout << "The standard deviation: " << standard_deviation << endl;
 	cout << "The variance is:  " << variance << endl;
+
+	delete[] values; // deallocate the dynamically allocated array
 
 	return 0;
 }
