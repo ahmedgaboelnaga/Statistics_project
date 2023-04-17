@@ -9,7 +9,7 @@ int main()
 	// b. mean & median & range & standard deviation & variance & mode
 
 	int input;
-	int largest, smallest;
+	int largest = 0, smallest = 0;
 	double sum = 0;
 
 	int size;
