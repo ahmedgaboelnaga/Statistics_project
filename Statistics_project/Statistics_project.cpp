@@ -17,6 +17,22 @@ int main()
 	cin >> size;
 	cout << "(Enter the numbers in an ascending order)" << endl;
 
+	int first_median, second_median, odd_median;
+	int first_median_location, second_median_location, odd_median_location;
+
+	double even_median;
+
+	if (size % 2 == 0)
+	{
+		first_median_location = size / 2;
+		second_median_location = first_median_location + 1;
+	}
+	else
+	{
+		odd_median_location = (size / 2);
+		odd_median_location += 1;
+	}
+
 	int i = 1;
 	int last_input = 0;
 	while (i <= size)
@@ -50,6 +66,26 @@ int main()
 		// calculate the sum to calculate the mean
 		sum += input;
 
+		// calculate the middle number to calculate the median
+		if (size % 2 == 0)
+		{
+			if (i == first_median_location)
+			{
+				first_median = input;
+			}
+			else if (i == second_median_location)
+			{
+				second_median = input;
+			}
+		}
+		else
+		{
+			if (i == odd_median_location)
+			{
+				odd_median = input;
+			}
+		}
+
 		i++;
 	}
 	cout << endl;
@@ -61,6 +97,16 @@ int main()
 
 	int range = largest - smallest;
 	cout << endl << "The range is: " << range << endl;
+
+	if (size % 2 == 0)
+	{
+		even_median = (first_median + second_median) / 2.0;
+		cout << "The median is: " << even_median << endl;
+	}
+	else
+	{
+		cout << "The median is: " << odd_median << endl;
+	}
 
 
 	return 0;
