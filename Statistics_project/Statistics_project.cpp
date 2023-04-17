@@ -47,6 +47,9 @@ int main()
 			largest = input;
 		}
 
+		// calculate the sum to calculate the mean
+		sum += input;
+
 		i++;
 	}
 	cout << endl;
