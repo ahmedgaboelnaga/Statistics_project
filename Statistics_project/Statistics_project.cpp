@@ -47,6 +47,15 @@ int main()
 		// calculate the sum to calculate the mean
 		sum += Values[i];
 	}
+
+	double variance_numerator = 0;
+	for (int i = 0; i < size; i++)
+	{
+		variance_numerator += pow((values[i] - mean), 2);
+	}
+	double variance = variance_numerator / (size - 1);
+	double standard_deviation = sqrt(variance);
+
 	sort(values, values + size);
 
 	double median;
@@ -58,14 +67,6 @@ int main()
 	{
 		median = values[size / 2];
 	}
-
-	double variance_numerator = 0;
-	for (int i = 0; i < size; i++)
-	{
-		variance_numerator += pow((values[i] - mean), 2);
-	}
-	double variance = variance_numerator / (size - 1);
-	double standard_deviation = sqrt(variance);
 
 	cout << endl << endl;
 	cout << "The largest number is: " << largest << endl;
