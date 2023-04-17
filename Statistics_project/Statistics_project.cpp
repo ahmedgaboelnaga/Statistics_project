@@ -17,7 +17,7 @@ int main()
 	cin >> size;
 	cout << "(Enter the numbers in an ascending order)" << endl;
 
-	int first_median, second_median, odd_median;
+	int first_median = 0, second_median = 0, odd_median = 0;
 	int first_median_location = 0, second_median_location = 0, odd_median_location = 0;
 
 	double even_median;
