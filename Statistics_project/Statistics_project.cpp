@@ -18,7 +18,7 @@ int main()
 	cout << "(Enter the numbers in an ascending order)" << endl;
 
 	int first_median, second_median, odd_median;
-	int first_median_location, second_median_location, odd_median_location;
+	int first_median_location = 0, second_median_location = 0, odd_median_location = 0;
 
 	double even_median;
 
@@ -107,7 +107,6 @@ int main()
 	{
 		cout << "The median is: " << odd_median << endl;
 	}
-
 
 	return 0;
 }
