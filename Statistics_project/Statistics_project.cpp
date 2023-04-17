@@ -68,6 +68,26 @@ int main()
 		median = values[size / 2];
 	}
 
+	int mode = 0;
+	int max_count = 0;
+
+	for (int i = 0; i < size; i++)
+	{
+		int count = 0;
+		for (int j = 0; j < size; j++)
+		{
+			if (values[j] == values[i])
+			{
+				count++;
+			}
+		}
+		if (count > max_count)
+		{
+			max_count = count;
+			mode = values[i];
+		}
+	}
+
 	cout << endl << endl;
 	cout << "The largest number is: " << largest << endl;
 	cout << "The smallest number is: " << smallest << endl;
@@ -76,6 +96,7 @@ int main()
 	cout << endl << "The mean is: " << mean << endl << endl;
 
 	cout << "The median is: " << median << endl;
+	cout << "The mode is: " << mode << endl;
 
 	int range = largest - smallest;
 	cout << endl << "The range is: " << range << endl;
