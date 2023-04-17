@@ -8,15 +8,15 @@ int main()
 	// a. maximum & minimum
 	// b. mean & median & range & standard deviation & variance & mode
 
-	int input;
-	int largest = 0, smallest = 0;
-	double sum = 0;
-
 	int size;
 	do {
 		cout << "Enter the number of items: " << endl;
 		cin >> size;
 	} while (size <= 0);
+
+
+	int largest = 0, smallest = 0;
+	double sum = 0;
 
 	int first_median = 0, second_median = 0, odd_median = 0;
 	int first_median_location = 0, second_median_location = 0, odd_median_location = 0;
@@ -35,37 +35,33 @@ int main()
 	}
 
 	int i = 1;
-	int last_input = 0;
+	int values[size]; // wrong because we must put a constant like values[5] or make a dynamic memory allocation
 	while (i <= size)
 	{
 		do
 		{
 			cout << "Enter the #" << i << " number: ";
-			cin >> input;
-
-
-		} while (input < last_input || input < 0); // we didn't use <= becase there is no problem in sroting if the 2 numbers are the same
-
-		last_input = input;
+			cin >> Values[i];
+		} while (values[i] < 0);
 
 		if (i == 1)
 		{
-			largest = input;
-			smallest = input;
+			largest = Values[i];
+			smallest = Values[i];
 		}
 
 		// calculate the largest and smallest to calculate the range
-		if (input < smallest)
+		if (Values[i] < smallest)
 		{
-			smallest = input;
+			smallest = Values[i];
 		}
-		if (input > largest)
+		if (Values[i] > largest)
 		{
-			largest = input;
+			largest = Values[i];
 		}
 
 		// calculate the sum to calculate the mean
-		sum += input;
+		sum += Values[i];
 
 		// calculate the middle number to calculate the median
 		if (size % 2 == 0)
