@@ -104,6 +104,7 @@ int main()
 	cout << "The variance is:  " << variance << endl;
 
 	delete[] values; // deallocate the dynamically allocated array
+	delete[] modes; // deallocate the dynamically allocated array
 
 	return 0;
 }
