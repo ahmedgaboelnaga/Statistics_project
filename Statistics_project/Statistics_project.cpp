@@ -63,6 +63,14 @@ int main()
 		median = values[size / 2];
 	}
 
+	double variance_numerator = 0;
+	for (int i = 0; i < size; i++)
+	{
+		variance_numerator += pow((values[i] - mean), 2);
+	}
+	double variance = variance_numerator / (size - 1);
+	double standard_deviation = sqrt(variance);
+
 	cout << endl << endl;
 	cout << "The largest number is: " << largest << endl;
 	cout << "The smallest number is: " << smallest << endl;
@@ -72,6 +80,9 @@ int main()
 
 	int range = largest - smallest;
 	cout << endl << "The range is: " << range << endl;
+
+	cout << "The standard deviation: " << standard_deviation << endl;
+	cout << "The variance is:  " << variance << endl;
 
 	return 0;
 }
