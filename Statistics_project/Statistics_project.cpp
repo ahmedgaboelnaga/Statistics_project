@@ -22,11 +22,11 @@ int main()
 	{
 		do
 		{
-			cout << "Enter the #" << i << " number: ";
+			cout << "Enter the #" << i + 1 << " number: ";
 			cin >> values[i];
 		} while (values[i] < 0);
 
-		sum += Values[i];
+		sum += values[i];
 	}
 	// Calculate statistics
 	sort(values, values + size);
@@ -81,8 +81,8 @@ int main()
 	// Print statistics
 	cout << endl << endl;
 	cout << "The largest number is: " << largest << endl;
-	cout << "The smallest number is: " << smallest << endl << endl;
-	cout << "The mean is: " << mean << endl << endl;
+	cout << "The smallest number is: " << smallest << endl;
+	cout << "The mean is: " << mean << endl;
 	cout << "The median is: " << median << endl;
 
 	if (max_count > 1) {
