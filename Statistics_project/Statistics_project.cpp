@@ -79,6 +79,8 @@ int main()
 	double mean = sum / size;
 	cout << endl << "The mean is: " << mean << endl << endl;
 
+	cout << "The median is: " << median << endl;
+
 	int range = largest - smallest;
 	cout << endl << "The range is: " << range << endl;
 
