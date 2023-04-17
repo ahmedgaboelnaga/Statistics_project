@@ -22,7 +22,7 @@ int main()
 	double sum = 0;
 
 	int values[size]; // wrong because we must put a constant like values[5] or make a dynamic memory allocation
-	while (int i = 0; i < size; i++)
+	for (int i = 0; i < size; i++)
 	{
 		do
 		{
