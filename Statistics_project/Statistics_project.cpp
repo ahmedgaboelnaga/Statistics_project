@@ -13,9 +13,10 @@ int main()
 	double sum = 0;
 
 	int size;
-	cout << "Enter the size of the sequence: ";
-	cin >> size;
-	cout << "(Enter the numbers in an ascending order)" << endl;
+	do {
+		cout << "Enter the number of items: " << endl;
+		cin >> size;
+	} while (size <= 0);
 
 	int first_median = 0, second_median = 0, odd_median = 0;
 	int first_median_location = 0, second_median_location = 0, odd_median_location = 0;
