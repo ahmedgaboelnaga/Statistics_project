@@ -21,9 +21,8 @@ int main()
 	int largest = 0, smallest = 0;
 	double sum = 0;
 
-	int i = 1;
 	int values[size]; // wrong because we must put a constant like values[5] or make a dynamic memory allocation
-	while (i <= size)
+	while (int i = 0; i < size; i++)
 	{
 		do
 		{
@@ -49,8 +48,6 @@ int main()
 
 		// calculate the sum to calculate the mean
 		sum += Values[i];
-
-		i++;
 	}
 	sort(values, values + size);
 
