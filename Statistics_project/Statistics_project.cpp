@@ -73,6 +73,7 @@ int main()
 
 	int mode = 0;
 	int max_count = 0;
+	bool has_mode = false;
 
 	for (int i = 0; i < size; i++)
 	{
@@ -88,6 +89,7 @@ int main()
 		{
 			max_count = count;
 			mode = values[i];
+			has_mode = true;
 		}
 	}
 
@@ -96,7 +98,16 @@ int main()
 	cout << "The smallest number is: " << smallest << endl << endl;
 	cout << "The mean is: " << mean << endl << endl;
 	cout << "The median is: " << median << endl;
-	cout << "The mode is: " << mode << endl << endl;
+
+	if (has_mode)
+	{
+		cout << "The mode is: " << mode << endl;
+	}
+	else
+	{
+		cout << "There is no mode." << endl;
+	}
+
 	cout << "The range is: " << range << endl;
 	cout << "The standard deviation: " << standard_deviation << endl;
 	cout << "The variance is:  " << variance << endl;
