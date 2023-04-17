@@ -56,25 +56,25 @@ int main()
 		median = values[size / 2];
 	}
 
-	int mode = 0;
+	// calculate mode
 	int max_count = 0;
-	bool has_mode = false;
-
-	for (int i = 0; i < size; i++)
-	{
+	int mode_count = 0;
+	int* modes = new int[size]; // dynamically allocate an array to store the modes
+	for (int i = 0; i < size; i++) {
 		int count = 0;
-		for (int j = 0; j < size; j++)
-		{
-			if (values[j] == values[i])
-			{
+		for (int j = 0; j < size; j++) {
+			if (values[j] == values[i]) {
 				count++;
 			}
 		}
-		if (count > max_count)
-		{
+		if (count > max_count) {
 			max_count = count;
-			mode = values[i];
-			has_mode = true;
+			mode_count = 1;
+			modes[0] = values[i];
+		}
+		else if (count == max_count) {
+			modes[mode_count] = values[i];
+			mode_count++;
 		}
 	}
 
@@ -85,12 +85,17 @@ int main()
 	cout << "The mean is: " << mean << endl << endl;
 	cout << "The median is: " << median << endl;
 
-	if (has_mode)
-	{
-		cout << "The mode is: " << mode << endl;
+	if (max_count > 1) {
+		cout << "The mode is: ";
+		for (int i = 0; i < mode_count; i++) {
+			if (i > 0 && modes[i] == modes[i - 1]) {
+				continue; // avoid printing duplicate values
+			}
+			cout << modes[i] << " ";
+		}
+		cout << endl;
 	}
-	else
-	{
+	else {
 		cout << "There is no mode." << endl;
 	}
 
