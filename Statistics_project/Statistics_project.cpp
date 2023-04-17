@@ -63,7 +63,7 @@ int main()
 		median = values[size / 2];
 	}
 
-	cout << endl;
+	cout << endl << endl;
 	cout << "The largest number is: " << largest << endl;
 	cout << "The smallest number is: " << smallest << endl;
 
@@ -72,16 +72,6 @@ int main()
 
 	int range = largest - smallest;
 	cout << endl << "The range is: " << range << endl;
-
-	double median;
-	if (size % 2 == 0)
-	{
-		median = (values[size / 2 - 1] + values[size / 2]) / 2.0;
-	}
-	else
-	{
-		median = values[size / 2];
-	}
 
 	return 0;
 }
