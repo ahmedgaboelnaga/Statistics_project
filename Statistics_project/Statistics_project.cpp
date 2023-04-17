@@ -15,11 +15,9 @@ int main()
 		cin >> size;
 	} while (size <= 0);
 
-
-	int largest = 0, smallest = 0;
 	double sum = 0;
-
 	int* values = new int[size]; // dynamically allocate an array of integers of size 'size'
+	// Read values and calculate the sum
 	for (int i = 0; i < size; i++)
 	{
 		do
@@ -28,25 +26,14 @@ int main()
 			cin >> values[i];
 		} while (values[i] < 0);
 
-		if (i == 0)
-		{
-			largest = Values[i];
-			smallest = Values[i];
-		}
-
-		// calculate the largest and smallest to calculate the range
-		if (Values[i] < smallest)
-		{
-			smallest = Values[i];
-		}
-		if (Values[i] > largest)
-		{
-			largest = Values[i];
-		}
-
 		// calculate the sum to calculate the mean
 		sum += Values[i];
 	}
+	sort(values, values + size);
+
+	int largest = values[size - 1];
+	int smallest = values[0];
+
 	double mean = sum / size;
 	int range = largest - smallest;
 
@@ -58,8 +45,6 @@ int main()
 	}
 	double variance = variance_numerator / (size - 1);
 	double standard_deviation = sqrt(variance);
-
-	sort(values, values + size);
 
 	double median;
 	if (size % 2 == 0)
@@ -93,6 +78,7 @@ int main()
 		}
 	}
 
+	// Print statistics
 	cout << endl << endl;
 	cout << "The largest number is: " << largest << endl;
 	cout << "The smallest number is: " << smallest << endl << endl;
