@@ -25,10 +25,10 @@ int main()
 		do
 		{
 			cout << "Enter the #" << i << " number: ";
-			cin >> Values[i];
+			cin >> values[i];
 		} while (values[i] < 0);
 
-		if (i == 1)
+		if (i == 0)
 		{
 			largest = Values[i];
 			smallest = Values[i];
@@ -47,6 +47,9 @@ int main()
 		// calculate the sum to calculate the mean
 		sum += Values[i];
 	}
+	double mean = sum / size;
+	int range = largest - smallest;
+
 
 	double variance_numerator = 0;
 	for (int i = 0; i < size; i++)
@@ -90,17 +93,11 @@ int main()
 
 	cout << endl << endl;
 	cout << "The largest number is: " << largest << endl;
-	cout << "The smallest number is: " << smallest << endl;
-
-	double mean = sum / size;
-	cout << endl << "The mean is: " << mean << endl << endl;
-
+	cout << "The smallest number is: " << smallest << endl << endl;
+	cout << "The mean is: " << mean << endl << endl;
 	cout << "The median is: " << median << endl;
-	cout << "The mode is: " << mode << endl;
-
-	int range = largest - smallest;
-	cout << endl << "The range is: " << range << endl;
-
+	cout << "The mode is: " << mode << endl << endl;
+	cout << "The range is: " << range << endl;
 	cout << "The standard deviation: " << standard_deviation << endl;
 	cout << "The variance is:  " << variance << endl;
 
