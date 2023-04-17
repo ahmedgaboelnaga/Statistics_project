@@ -59,6 +59,9 @@ int main()
 	double mean = sum / size;
 	cout << endl << "The mean is: " << mean << endl << endl;
 
+	int range = largest - smallest;
+	cout << endl << "The range is: " << range << endl;
+
 
 	return 0;
 }
