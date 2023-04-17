@@ -56,6 +56,9 @@ int main()
 	cout << "The largest number is: " << largest << endl;
 	cout << "The smallest number is: " << smallest << endl;
 
+	double mean = sum / size;
+	cout << endl << "The mean is: " << mean << endl << endl;
+
 
 	return 0;
 }
