@@ -15,9 +15,9 @@ int main()
 		cin >> size;
 	} while (size <= 0);
 
+	// Read values and calculate the sum
 	double sum = 0;
 	int* values = new int[size]; // dynamically allocate an array of integers of size 'size'
-	// Read values and calculate the sum
 	for (int i = 0; i < size; i++)
 	{
 		do
@@ -26,9 +26,9 @@ int main()
 			cin >> values[i];
 		} while (values[i] < 0);
 
-		// calculate the sum to calculate the mean
 		sum += Values[i];
 	}
+	// Calculate statistics
 	sort(values, values + size);
 
 	int largest = values[size - 1];
